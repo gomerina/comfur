@@ -1,0 +1,2248 @@
+@import "nullstyle.scss";
+@import "fonts.scss";
+
+h1 {
+    font-size: 55px;
+    line-height: 60px;
+    font-family: 'Vaccine Sans Bold';
+}
+
+h2 {
+    font-family: 'Vaccine Sans Regular';
+    font-size: 35px;
+    line-height: 42px;
+}
+
+h3 {
+    font-family: 'Vaccine Sans Bold';
+    font-size: 24px;
+    line-height: 25px;
+}
+
+h6 {
+    font-size: 16px;
+    font-family: 'Vaccine Sans Bold';
+}
+
+.container {
+    max-width: 1301px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.heading {
+    margin: 0 0 40px 0;
+}
+
+.header__logo img,
+.footer__logo img {
+    width: 200px;
+    height: 70px;
+}
+
+.header__logo {
+    position: relative;
+    bottom: 15px;
+}
+
+.tg-icon,
+.vk-icon {
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        position: absolute;
+        transition: opacity .3s linear, visibility .3s linear;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.tg-icon:after {
+    content: url(../img/tg-hover.png);
+    top: 5px;
+    right: -3px;
+}
+
+.vk-icon:after {
+    content: url(../img/vk-hover.png);
+    top: 5px;
+    right: -3px;
+}
+
+.vk .product-card__text {
+    text-align: center;
+}
+
+.product-card__text {
+    text-align: center;
+}
+
+.slider-box {
+    padding: 0 30px;
+    max-width: 1340px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+
+    & .swiper {
+        position: static;
+    }
+
+    & .swiper-wrapper {
+        position: static;
+    }
+}
+
+.header__search {
+    display: none;
+    background: #fff;
+    padding: 5px 0;
+    position: relative;
+    z-index: 301;
+
+    & .container {
+        position: relative;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    & input {
+        width: 100%;
+        padding: 10px 28px;
+        border-bottom: 1px solid grey;
+    }
+}
+
+.header-search__button {
+    width: 16px;
+    height: 16px;
+    background: url(../img/svg/search.svg);
+    position: absolute;
+    left: 11px;
+    top: 10px;
+}
+
+.menu__chevron {
+    width: 15px;
+    height: 8px;
+    background: url(../img/chevron.png) no-repeat center;
+    display: none;
+    transition: transform .3s linear;
+}
+
+.menu__item {
+    position: relative;
+
+    &:hover .submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.submenu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s linear, visibility .3s linear;
+    top: 100%;
+    left: -20px;
+    background: #fff;
+    padding: 30px 20px;
+
+    & a {
+        display: block;
+    }
+
+    & a:not(:last-child) {
+        margin: 0 0 10px 0;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 60px;
+    height: 60px;
+    top: 48%;
+    background: #fff;
+
+    &:before {
+        content: url(../img/arrow-hover.png);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s linear, visibility .3s linear;
+        position: absolute;
+        right: 19px;
+        top: 25px;
+        width: 19px;
+        height: 14px;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.swiper-button-prev:before {
+    transform: rotate(-180deg);
+    right: 22px;
+    top: 27px;
+}
+
+
+.swiper-button-next {
+    right: 0;
+
+    &:after {
+        content: url(../img/right-arrow.png);
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        z-index: 1;
+    }
+}
+
+.swiper-button-prev {
+    left: 0;
+
+    &:after {
+        content: url(../img/left-arrow.png);
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        z-index: 1;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 1 !important;
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header__top {
+    background: #bdebfe;
+    padding: 24px 0px 20px 0;
+    font-size: 16px;
+    font-family: 'Vaccine Sans Bold';
+    z-index: 1000;
+    transition: background .3s linear;
+
+    &.white {
+        background: #fff;
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+}
+
+.header__top-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & a {
+        width: max-content;
+        transition: background .3s linear;
+
+        &:hover {
+            background: #fff;
+        }
+    }
+}
+
+.header__top-icons {
+    display: flex;
+    gap: 40px;
+}
+
+
+
+.header__top-icon {
+    position: relative;
+    cursor: pointer;
+
+    & img {
+        vertical-align: top;
+    }
+
+    &.search:after,
+    &.favorite:after,
+    &.header__basket:after,
+    &.user:after {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s linear, visibility .3s linear;
+    }
+
+    &.search {
+        z-index: 1;
+        width: 16px;
+        height: 16px;
+
+        & img {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:after {
+            content: url(../img/search-hover.png);
+            right: -3px;
+            top: 0;
+
+        }
+
+        &:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.favorite {
+        z-index: 1;
+        width: 16px;
+        height: 17px;
+
+        & img {
+            width: 16px;
+            height: 17px;
+        }
+
+        &:after {
+            content: url(../img/favorite-hover.png);
+            right: -4px;
+            top: 3px;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.user {
+        z-index: 1;
+        width: 15px;
+        height: 16px;
+
+        & img {
+            width: 15px;
+            height: 16px;
+        }
+
+        &:after {
+            content: url(../img/profile-hover.png);
+            right: -3px;
+            top: 2px;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.header__basket {
+        z-index: 1;
+        width: 15px;
+        height: 16px;
+
+        & img {
+            width: 15px;
+            height: 16px;
+            display: inherit;
+        }
+
+        &:after {
+            content: url(../img/basket-hover.png);
+            right: 16px;
+            top: 2px;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.header__basket-value {
+    font-family: 'Vaccine Sans Light';
+    font-size: 18px;
+    margin: 0 0 0 3px;
+    position: relative;
+    bottom: 2px;
+}
+
+.header__bottom {
+    padding: 36px 0;
+    background: #fff;
+}
+
+.header__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__bottom-nav {
+    font-family: 'Vaccine Sans Light';
+    display: flex;
+    gap: 41px;
+    font-size: 18px;
+
+    & a {
+        width: max-content;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            max-width: 0;
+            transition: max-width .3s linear;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #000;
+        }
+
+        &:hover::after {
+            max-width: 100%;
+        }
+    }
+}
+
+.header__tel {
+    font-family: 'Vaccine Sans ExtraBold';
+    font-size: 18px;
+}
+
+.main-screen {
+    margin: 18px 0 130px 0;
+}
+
+.main-screen__content {
+    position: absolute;
+    top: -108px;
+    left: -35px;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+
+    & .trend-text {
+        font-size: 315px;
+        font-family: 'Vaccine Sans ExtraBold Italic';
+        font-weight: 900;
+        font-style: italic;
+        color: #fff;
+    }
+
+    & .button {
+        border: 1px solid #fff;
+        color: #fff;
+        min-width: 150px;
+    }
+}
+
+.main-screen__item {
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.advantages {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 124px 0;
+
+    &:after {
+        content: url(../img/advantages-after.png);
+        position: absolute;
+        right: 0;
+        top: -275px;
+        z-index: -1;
+    }
+}
+
+.advantages__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+}
+
+.advantages__left-item {
+    font-size: 18px;
+}
+
+.advantages__left-img {
+    height: 76px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 17px 0;
+}
+
+.advantages__left {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    column-gap: 75px;
+    row-gap: 85px;
+    max-width: 330px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.advantages__heading {
+    margin: -10px 0 44px 0;
+
+    & h1 {
+        font-family: "Vaccine Sans Light";
+    }
+}
+
+.advantages__descr {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 45px 0;
+}
+
+.extra-bold {
+    font-family: 'Vaccine Sans ExtraBold';
+}
+
+.button {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 21px;
+    text-align: center;
+    min-width: 200px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Vaccine Sans Regular';
+    font-size: 18px;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: -5px;
+        top: 5px;
+        background: #bdebfe;
+        border-radius: 21px;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.product-card {
+    position: relative;
+    transition: opacity .3s linear, visibility .3s linear;
+
+    &:hover .product-card__icons {
+        display: flex;
+    }
+
+    &:hover .product__indicators {
+        display: flex;
+    }
+
+    &:hover .product__img {
+        background: #f4f4f4;
+    }
+
+    &:hover .product-card__bottom {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.product-card__favorite,
+.product-card__basket {
+    cursor: pointer;
+}
+
+.product-card__icons {
+    position: absolute;
+    z-index: 1;
+    top: 16px;
+    right: 22px;
+    display: none;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.hits {
+    margin: 0 0 142px 0;
+}
+
+
+
+.product__img {
+    height: 387px;
+    position: relative;
+    background: #fff;
+    padding: 62px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 15px 0;
+
+    & img {
+        display: none;
+        max-width: 100%;
+        max-height: 100%;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    & video {
+        display: none;
+        max-width: 100%;
+        max-height: 100%;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.product__indicators {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.product__indicator {
+    height: 100%;
+    border-bottom: 5px solid #dedede;
+
+    &.current {
+        border-bottom: 5px solid #acacac;
+    }
+}
+
+.photo-gallerey__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-gallerey__item {
+    height: 750px;
+}
+
+.photo-gallerey {
+    margin: 0 0 64px 0;
+}
+
+.new {
+    margin: 0 0 129px 0;
+}
+
+.more-box {
+    margin: 37px 0 0 0;
+    font-size: 18px;
+    text-align: right;
+
+    & a {
+        padding: 0 0 5px 0;
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #888888;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.projects {
+    position: relative;
+    margin: 0 0 81px 0;
+
+    &:before {
+        content: url(../img/proj-before.png);
+        position: absolute;
+        left: 0;
+        top: -300px;
+        z-index: -1;
+    }
+}
+
+.projects__inner {
+    display: flex;
+    gap: 31px;
+}
+
+.project__items-box {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 31px;
+}
+
+.project__item {
+    position: relative;
+
+    &:hover .project__info {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.project__item--tall {
+    width: 405px;
+}
+
+.project__info {
+    padding: 21px 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s linear, visibility .3s linear;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: #bdebfe;
+    width: 100%;
+
+    & .button {
+        min-width: 150px;
+    }
+}
+
+.project__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project__item--big {
+    grid-column: span 2;
+}
+
+// Подвал
+.footer {
+    background: #bdebfe;
+    padding: 57px 0 111px 0;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 53px;
+    row-gap: 20px;
+}
+
+.footer__address {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+.footer__tel {
+    font-family: 'Vaccine Sans ExtraBold';
+    font-size: 23px;
+
+    & a {
+        transition: background .3s linear;
+    }
+
+    & a:hover {
+        background: #fff;
+    }
+}
+
+.footer__logo {
+    display: inline-block;
+    margin: 0 0 42px 0;
+}
+
+.footer__nav {
+    display: flex;
+    column-gap: 75px;
+    row-gap: 15px;
+    font-size: 18px;
+    margin: 26px 0 0 0;
+}
+
+.footer__col:last-child {
+    margin: 24px 0 0 0;
+}
+
+.footer__nav-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & a {
+        transition: background .3s linear;
+    }
+
+    & a:hover {
+        background: #fff;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    margin: 0 0 16px 0;
+}
+
+.footer__mail {
+    font-family: 'Vaccine Sans ExtraBold';
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 0 75px 0;
+    transition: background .3s linear;
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.footer__designer {
+    font-size: 18px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+
+    & span {
+        position: relative;
+        top: 9px;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-family: 'Vaccine Sans Light Italic';
+    color: #a8a8a8;
+    margin: 46px 0 30px 0;
+}
+
+.breadcrumb__link {
+    position: relative;
+
+    &:after {
+        content: '/';
+        position: absolute;
+        right: -10px;
+        top: 4px;
+        font-size: 10px;
+    }
+
+    &:last-child::after {
+        content: none;
+    }
+}
+
+.button__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 15px;
+    margin: 0 0 70px 0;
+
+    & .button {
+        min-width: auto;
+        padding: 7px 22px;
+    }
+}
+
+.blog__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1.333fr);
+    column-gap: 32px;
+    row-gap: 81px;
+}
+
+.blog-heading {
+    margin: 0 0 24px 0;
+}
+
+.blog__item {
+    font-family: 'Vaccine Sans Regular';
+    font-size: 24px;
+}
+
+.blog__img {
+    margin: 0 0 20px 0;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.blog__wrapper {
+    padding: 0 0 135px 0;
+}
+
+.pagination {
+    max-width: 300px;
+    font-family: 'Vaccine Sans Regular';
+    display: flex;
+    margin: 129px auto 0px auto;
+}
+
+.pagination__link {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.current {
+        background: #f4f4f4;
+    }
+
+    &.prev {
+        transform: rotate(-180deg);
+    }
+
+}
+
+.news-main {
+    display: flex;
+    gap: 49px;
+    margin: 0 0 24px 0;
+}
+
+.news-main__img {
+    max-width: 764px;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.news-main__content {
+    max-width: 468px;
+    margin: 148px 0 0 0;
+}
+
+.photo-author {
+    font-family: 'Vaccine Sans Light Italic';
+    margin: 20px 0 0 0;
+    line-height: 22px;
+}
+
+.news-main__date {
+    font-family: 'Vaccine Sans Light Italic';
+    margin: 0 0 66px 0;
+    display: block;
+    color: #000;
+}
+
+.news-main__content h1 {
+    font-family: 'Vaccine Sans ExtraBold';
+    font-size: 35px;
+    line-height: 40px;
+    margin: 0 0 32px 0;
+}
+
+.news-main__descr {
+    font-family: 'Vaccine Sans Light Italic';
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.news__item--offset {
+    padding: 0 0 0 217px;
+    margin: 0 0 50px 0;
+}
+
+.news__item-head {
+    margin: 0 0 15px 0;
+}
+
+.news__item-body {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 900px;
+}
+
+.news__item-descr:not(:last-child) {
+    margin: 0 0 30px 0;
+}
+
+.news__img {
+    margin: 0 0 50px 0;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.numeric-list {
+    margin: 0 0 30px 0;
+    font-size: 18px;
+    counter-reset: section;
+}
+
+.numeric-list__item {
+    font-size: 18px;
+    position: relative;
+    padding: 0 0 0 43px;
+
+    &:before {
+        counter-increment: section;
+        content: "0" counters(section, ".") ".";
+        position: absolute;
+        left: 0;
+        top: 1px;
+        font-family: 'Vaccine Sans Bold';
+    }
+
+    &:nth-child(n + 10):before {
+        content: counters(section, ".") ".";
+    }
+}
+
+.numeric-list__item:not(:last-child) {
+    margin: 0 0 15px 0;
+}
+
+.blog__wrapper {
+    padding: 0 0 144px 0;
+}
+
+.news-descr__bottom {
+    font-family: 'Vaccine Sans Light Italic';
+    font-size: 24px;
+    line-height: 36px;
+
+    & span {
+        background: #bdebfe;
+    }
+}
+
+.big-card__inner {
+    display: grid;
+    grid-template-columns: 2.75fr 1.25fr;
+    column-gap: 50px;
+    row-gap: 25px;
+    margin: 0 0 115px 0;
+}
+
+.big-card__slider {
+    width: 100%;
+    height: 870px;
+
+    & .swiper-button-next {
+        right: 431px;
+    }
+
+    & .swiper-button-next,
+    .swiper-button-prev {
+        top: 400px;
+    }
+}
+
+.big-card__img {
+    padding: 100px 20px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.youtube {
+    padding: 0;
+    background: transparent;
+    z-index: 0;
+    position: relative;
+    background-size: 100% 100%;
+}
+
+.big-card__slider {
+    & iframe {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    & video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.play-icon {
+    width: 45px;
+    height: 45px;
+    background: url(../img/svg/play.svg) no-repeat center;
+    background-size: 45px 45px;
+    position: relative;
+    top: 1px;
+}
+
+.big-card__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.big-card__favorite {
+    cursor: pointer;
+}
+
+.big-card__articule {
+    margin: 0 0 35px 0;
+    font-family: 'Vaccine Sans Light Italic';
+}
+
+.big-card__descr {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 67px 0;
+}
+
+.video-link {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.accordion-head {
+    font-family: 'Vaccine Sans Bold';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+
+    &.active .accordion-chevron {
+        transform: rotate(-180deg);
+    }
+}
+
+.accordion-chevron {
+    width: 21px;
+    height: 13px;
+    background: url(../img/chevron.png) no-repeat center;
+    transition: transform .3s linear;
+    display: inline-block;
+}
+
+.download-icon {
+    width: 21px;
+    height: 21px;
+    background: url(../img/download.png) no-repeat center;
+}
+
+.accordion__item {
+    border: 1px solid #777777;
+    border-width: 1px 0 1px 0;
+    display: block;
+
+
+    &:not(:first-child) {
+        border-width: 0 0 1px 0;
+    }
+}
+
+.accordion__content {
+    display: none;
+    padding: 0 0 20px 0;
+
+}
+
+.radio-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0 20px 0 0;
+}
+
+.big-card__wrapper {
+    padding: 0 0 135px 0;
+}
+
+// Radio
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background: #fff;
+    border: 1px solid #000000;
+    border-radius: undefinedpx;
+}
+
+.control:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked~.control_indicator {
+    background: #fff;
+}
+
+
+.control input:disabled~.control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-radio .control_indicator {
+    border-radius: 50%;
+}
+
+.control-radio .control_indicator:after {
+    left: 3px;
+    top: 3px;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: #000;
+    transition: background 250ms;
+}
+
+.control-radio input:disabled~.control_indicator:after {
+    background: #7b7b7b;
+}
+
+// end radio
+// checkbox 
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-filter {
+    position: relative;
+}
+
+.checkbox-filter__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 8px;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    max-width: 130px;
+    width: 100%;
+    min-width: 130px;
+    cursor: pointer;
+
+    &.active .accordion-chevron {
+        transform: rotate(-180deg);
+    }
+}
+
+.checkbox-filter__menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    z-index: 2;
+    width: 100%;
+    padding: 10px 0 0 0;
+
+    & .control {
+        margin-bottom: 10px;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.control-checkbox:hover input~.control_indicator,
+.control input:focus~.control_indicator {
+    background: #fff;
+}
+
+// end checkbox
+.char__item {
+    padding: 10px 30px 10px 21px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+
+    &:nth-child(2n+2) {
+        background: #f4f4f4;
+    }
+}
+
+.char__name {
+    max-width: 182px;
+}
+
+.char__value {
+    min-width: 70px;
+    text-align: left;
+}
+
+.accordion__descr:not(:last-child) {
+    margin: 0 0 14px 0;
+}
+
+.accordion__textblock {
+    padding: 0 21px 0 21px;
+}
+
+.modifier__item {
+    padding: 10px 30px 10px 21px;
+    margin: 0 0 10px 0;
+
+    &:not(:first-child) {
+        background: #f4f4f4;
+        text-decoration: underline;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.catalog__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0 0 42px 0;
+    column-gap: 30px;
+
+    & .button__navigation {
+        margin: 0;
+    }
+}
+
+.reset-box {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 42px 0;
+
+    & .button {
+        background: none;
+    }
+}
+
+.catalog__filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+// select
+.custom-select {
+    position: relative;
+    font-family: 'Vaccine Sans Regular';
+    min-width: 130px;
+}
+
+.custom-select__head {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    max-width: 130px;
+    width: 100%;
+}
+
+.select-menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    z-index: 2;
+    width: 100%;
+    margin: 6px 0 0 0;
+}
+
+.custom-select {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform .3s linear;
+
+    &.active .accordion-chevron {
+        transform: rotate(-180deg);
+    }
+}
+
+.custom-select__value {
+    display: inline-block;
+}
+
+.custom-select.active .select-menu {
+    display: block;
+}
+
+.select-menu__item {
+    padding: 7px 0px;
+    transition: background .3s linear;
+}
+
+.select-menu__item.hidden {
+    display: none;
+}
+
+// end select
+
+.catalog__box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 25px;
+    row-gap: 90px;
+}
+
+.product-card__bottom {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    z-index: 3;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s linear, visibility .3s linear;
+}
+
+.catalog__wrapper {
+    padding: 0 0 135px 0;
+}
+
+.card__bottom-col {
+    max-width: 65px;
+}
+
+.card__bottom-name {
+    margin: 0 0 10px 0;
+    color: #a8a8a8;
+    font-size: 14px;
+}
+
+.card__bottom-value {
+    font-family: 'Vaccine Sans Regular';
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    display: none;
+}
+
+.video-button {
+    background: none;
+}
+
+.modal-video {
+    max-width: 1301px;
+    width: 100%;
+    height: 75vh;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1002;
+
+    & video {
+        height: 100%;
+        width: 100%;
+        object-fit: initial;
+    }
+
+    & iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.close-video {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: url(../img/svg/close.svg) no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+}
+
+// Все проекты
+
+
+@media screen and (max-width: 1330px) {
+    .big-card__inner {
+        grid-template-columns: 4fr;
+    }
+
+    .big-card__slider {
+        order: 1;
+    }
+
+    .video-link {
+        order: 2;
+    }
+
+    .big-card__content {
+        order: 3;
+    }
+
+    .big-card__slider .swiper-button-next {
+        right: 0;
+    }
+
+    .big-card__slider {
+        height: 600px;
+    }
+
+    .big-card__slider .swiper-button-next,
+    .big-card__slider .swiper-button-prev {
+        top: 291px;
+    }
+
+    .main-screen__content .trend-text {
+        font-size: 223px;
+    }
+
+    .main-screen__content {
+        top: -69px;
+    }
+
+    .header__bottom-nav {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .header__top-nav {
+        gap: 15px;
+    }
+
+    .header__bottom-nav {
+        gap: 20px;
+    }
+
+    .footer__nav {
+        column-gap: 40px;
+    }
+
+    .advantages__left {
+        column-gap: 35px;
+        row-gap: 35px;
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    body.fixed {
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 0 22px;
+    }
+
+    .header__inner .top-nav__box,
+    .bottom-nav__box .header__bottom-nav {
+        position: absolute;
+        left: -99999px;
+        top: -99999px;
+    }
+
+    .header-search__button {
+        left: 22px;
+    }
+
+    .swiper-button-next:after {
+        top: -10px;
+        left: 10px;
+    }
+
+    .swiper-button-prev:after {
+        top: -10px;
+        left: 10px;
+    }
+
+    .swiper-button-next:before {
+        right: 9px;
+        top: 15px;
+    }
+
+    .swiper-button-prev:before {
+        right: 13px;
+        top: 17px;
+    }
+
+    h1 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+    .footer__mail {
+        margin: 0 0 16px 0;
+    }
+
+    .header__top-icons {
+        gap: 15px;
+        align-items: center;
+    }
+
+    .header__top-icon.search {
+        margin: -9px 0 0 0;
+    }
+
+    .header__top-icon.header__basket {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .header__basket-value {
+        position: static;
+    }
+
+    .header__top-icon.search img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer__designer {
+        justify-content: flex-start;
+    }
+
+    .menu__item-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 340px;
+
+        &.active .menu__chevron {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .header__logo img,
+    .footer__logo img {
+        width: 170px;
+        height: 63px;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 15px 0 0 0;
+    }
+
+    .menu__item {
+        width: 100%;
+    }
+
+    .menu__chevron {
+        display: inline-block;
+    }
+
+    .footer__social {
+        justify-content: flex-start;
+        margin: 16px 0;
+    }
+
+    .footer__col:last-child {
+        margin: 0;
+    }
+
+    .footer__nav {
+        margin: 0;
+    }
+
+    .footer__nav {
+        justify-content: space-between;
+    }
+
+    .header__top-nav,
+    .header__bottom-nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        margin: 0 0 15px 0;
+    }
+
+    .header__top-nav {
+        order: 0;
+        font-family: 'Vaccine Sans ExtraBold';
+    }
+
+    .header__bottom-nav {
+        order: -1;
+        margin: 0 0 30px 0;
+    }
+
+    .mobile-nav__box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__tel {
+        display: inline-block;
+        margin: 15px 0 0 0;
+    }
+
+    .header__bottom {
+        display: none;
+    }
+
+    .header__top {
+        padding: 11px 0px 5px 0;
+    }
+
+    .header__logo {
+        bottom: 8px;
+        left: 0px;
+    }
+
+    .mobile-nav {
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 79px;
+        overflow: auto;
+        background: #fff;
+        z-index: 300;
+        padding: 51px 20px 200px 20px;
+        flex-direction: column;
+        display: none;
+    }
+
+
+    .burger {
+        display: block;
+        margin: -5px 0px 0 0;
+
+        & span {
+            display: block;
+            width: 34px;
+            height: 2px;
+            background: #000;
+
+            &:not(:last-child) {
+                margin: 0 0 7px 0;
+            }
+        }
+
+        &.active {
+            & span:first-child {
+                display: none;
+            }
+
+            & span:last-child {
+                display: none;
+            }
+
+            & span:not(:last-child) {
+                margin: 0;
+            }
+        }
+    }
+
+    .header-favorite__box,
+    .header-user__box,
+    .header-basket__box {
+        display: none;
+    }
+
+    .mobile-nav__icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 0;
+        position: fixed;
+        z-index: 301;
+        bottom: 0;
+        right: -20px;
+        width: calc(100% + 40px);
+        background: #fff;
+        border-top: 1px solid #000;
+        order: 1;
+    }
+
+
+
+    // Главная
+    .advantages__inner {
+        flex-direction: column;
+        gap: 69px;
+        row-gap: 69px;
+    }
+
+    .advantages__left-img.car img {
+        max-width: 75px;
+        max-height: 75px;
+    }
+
+    .advantages__descr {
+        margin: 0 0 30px 0;
+    }
+
+    .advantages__heading {
+        margin: 0px 0 24px 0;
+    }
+
+    .main-screen__content .trend-text {
+        font-size: 141px;
+        font-family: 'Vaccine Sans ExtraBold';
+    }
+
+    .main-screen__content {
+        top: -44px;
+        left: -12px;
+    }
+
+    .advantages__left-text {
+        text-align: center;
+    }
+
+    .advantages__left {
+        max-width: 100%;
+        justify-items: center;
+        height: auto;
+    }
+
+    .advantages__left-img {
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 3px 0;
+    }
+
+    .photo-gallerey__item {
+        height: 495px;
+    }
+
+    .projects__inner {
+        gap: 15px;
+    }
+
+    .project__items-box {
+        gap: 15px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-box {
+        padding: 0 20px;
+    }
+
+    .main-screen {
+        margin: 25px 0 53px 0;
+    }
+
+    .projects:before {
+        content: none;
+    }
+
+    .blog__item {
+        font-size: 22px;
+    }
+
+    // Новости
+    .news-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-main__img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    .news__item--offset {
+        padding: 0;
+    }
+
+    .news-main__content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .news-main__date {
+        margin: 0 0 25px 0;
+    }
+
+    .news-main__content h1 {
+        margin: 0 0 25px 0;
+    }
+
+    .news-main__content h1 {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    .news-main__descr {
+        line-height: 22px;
+    }
+
+    // Каталог
+    .catalog__box {
+        grid-template-columns: repeat(3, 1.333fr);
+    }
+
+    // Проекты внутренняя
+
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .project__items-box {
+        display: none;
+    }
+
+
+
+    .main-screen__content {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .main-screen__content .button {
+        font-size: 14px;
+        padding: 5px;
+        min-width: 99px;
+    }
+
+    .main-screen__content .trend-text {
+        font-size: 116px;
+        line-height: 120px;
+    }
+
+    .more-box {
+        text-align: left;
+    }
+
+    .project__item--tall {
+        width: 100%;
+        max-height: 497px;
+    }
+
+    .advantages:after {
+        content: url(../img/advantages-mobile.png);
+        top: 340px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .advantages__left-img img {
+        max-width: 57px;
+        max-height: 62px;
+    }
+
+    .advantages__left-img {
+        height: 66px;
+    }
+
+    .advantages {
+        margin: 0 0 73px 0;
+    }
+
+    .heading {
+        margin: 0 0 12px 0;
+    }
+
+    .gallerey-heading {
+        margin: 0 0 20px 0;
+    }
+
+    .more-box {
+        margin: 20px 0 0 0;
+    }
+
+    .product__img {
+        height: 383px;
+    }
+
+    .hits {
+        margin: 0 0 75px 0;
+    }
+
+    .photo-gallerey {
+        margin: 0 0 76px 0;
+    }
+
+    .new {
+        margin: 0 0 73px 0;
+    }
+
+    .projects-heading {
+        margin: 0 0 23px 0;
+    }
+
+    // Блог
+    .blog__inner {
+        grid-template-columns: repeat(2, 2fr);
+        column-gap: 15px;
+        row-gap: 45px;
+    }
+
+    .blog-heading {
+        margin: 0 0 14px 0;
+    }
+
+    .button__navigation {
+        column-gap: 11px;
+        row-gap: 11px;
+        margin: 0 0 45px 0;
+    }
+
+    // Большая карточка
+    .big-card__slider {
+        height: 388px;
+    }
+
+    .big-card__img {
+        padding: 45px 20px;
+    }
+
+    .big-card__slider .swiper-button-next,
+    .big-card__slider .swiper-button-prev {
+        top: 200px;
+    }
+
+
+
+    .footer {
+        padding: 40px 0;
+    }
+
+    // Каталог
+    .catalog__box {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .breadcrumbs {
+        margin: 24px 0px 11px 0;
+    }
+
+
+
+    .button__navigation .button {
+        padding: 8px 33px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .advantages__heading h1 {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    h1 {
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    .main-screen__content .trend-text {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+    }
+
+    .footer__nav {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .footer__nav-item:last-child {
+        display: grid;
+        grid-template-columns: 188px 150px;
+        justify-content: space-between;
+        width: 100%;
+        padding: 25px 0;
+        border: 1px solid #000;
+        border-width: 1px 0 1px 0;
+        margin: 15px 0 0 0;
+    }
+
+    .advantages__descr {
+        font-size: 18px;
+        line-height: 22px;
+        color: #a8a8a8;
+    }
+
+    .projects__wrapper {
+        grid-template-columns: 4fr;
+        gap: 15px;
+    }
+
+    .wrapper {
+        padding: 0 0 50px 0;
+    }
+
+    .pagination {
+        margin: 50px auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .blog__inner {
+        grid-template-columns: 4fr;
+    }
+
+    .blog__img img {
+        width: 100%;
+    }
+
+    .catalog__box {
+        grid-template-columns: 4fr;
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .photo-gallerey__item {
+        height: 380px;
+    }
+
+    .footer__nav-item:last-child {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .footer__nav {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,2601 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: "Vaccine Sans Light";
+  color: #000000;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+iframe {
+  width: 100%;
+}
+
+input:-webkit-autofill {
+  background: #ffffff;
+  -webkit-transition: 10000000000s linear;
+  transition: 10000000000s linear;
+}
+
+@font-face {
+  font-family: "Vaccine Sans Light";
+  src: url("../fonts/VaccineSans-Light.eot");
+  src: url("../fonts/VaccineSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-Light.woff") format("woff"), url("../fonts/VaccineSans-Light.otf") format("otf"), url("../fonts/VaccineSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans ExtraBold Italic";
+  src: url("../fonts/VaccineSans-ExtraBoldItalic.eot");
+  src: url("../fonts/VaccineSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-ExtraBoldItalic.woff") format("woff"), url("../fonts/VaccineSans-ExtraBoldItalic.otf") format("otf"), url("../fonts/VaccineSans-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Bold Italic";
+  src: url("../fonts/VaccineSans-BoldItalic.eot");
+  src: url("../fonts/VaccineSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-BoldItalic.woff") format("woff"), url("../fonts/VaccineSans-BoldItalic.otf") format("otf"), url("../fonts/VaccineSans-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Bold";
+  src: url("../fonts/VaccineSans-Bold.eot");
+  src: url("../fonts/VaccineSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-Bold.woff") format("woff"), url("../fonts/VaccineSans-Bold.otf") format("otf"), url("../fonts/VaccineSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Italic";
+  src: url("../fonts/VaccineSans-Italic.eot");
+  src: url("../fonts/VaccineSans-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-Italic.woff") format("woff"), url("../fonts/VaccineSans-Italic.otf") format("otf"), url("../fonts/VaccineSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Regular";
+  src: url("../fonts/VaccineSans-Regular.eot");
+  src: url("../fonts/VaccineSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-Regular.woff") format("woff"), url("../fonts/VaccineSans-Regular.otf") format("otf"), url("../fonts/VaccineSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans ExtraBold";
+  src: url("../fonts/VaccineSans-ExtraBold.eot");
+  src: url("../fonts/VaccineSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-ExtraBold.woff") format("woff"), url("../fonts/VaccineSans-ExtraBold.otf") format("otf"), url("../fonts/VaccineSans-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Black Italic";
+  src: url("../fonts/VaccineSans-BlackItalic.eot");
+  src: url("../fonts/VaccineSans-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-BlackItalic.woff") format("woff"), url("../fonts/VaccineSans-BlackItalic.otf") format("otf"), url("../fonts/VaccineSans-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Black";
+  src: url("../fonts/VaccineSans-Black.eot");
+  src: url("../fonts/VaccineSans-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-Black.woff") format("woff"), url("../fonts/VaccineSans-Black.otf") format("otf"), url("../fonts/VaccineSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vaccine Sans Light Italic";
+  src: url("../fonts/VaccineSans-LightItalic.eot");
+  src: url("../fonts/VaccineSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/VaccineSans-LightItalic.woff") format("woff"), url("../fonts/VaccineSans-LightItalic.otf") format("otf"), url("../fonts/VaccineSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+h1 {
+  font-size: 55px;
+  line-height: 60px;
+  font-family: "Vaccine Sans Bold";
+}
+
+h2 {
+  font-family: "Vaccine Sans Regular";
+  font-size: 35px;
+  line-height: 42px;
+}
+
+h3 {
+  font-family: "Vaccine Sans Bold";
+  font-size: 24px;
+  line-height: 25px;
+}
+
+h6 {
+  font-size: 16px;
+  font-family: "Vaccine Sans Bold";
+}
+
+.container {
+  max-width: 1301px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.heading {
+  margin: 0 0 40px 0;
+}
+
+.header__logo img,
+.footer__logo img {
+  width: 200px;
+  height: 70px;
+}
+
+.header__logo {
+  position: relative;
+  bottom: 15px;
+}
+
+.tg-icon,
+.vk-icon {
+  position: relative;
+  z-index: 1;
+}
+.tg-icon:after,
+.vk-icon:after {
+  position: absolute;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.tg-icon:hover::after,
+.vk-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tg-icon:after {
+  content: url(../img/tg-hover.png);
+  top: 5px;
+  right: -3px;
+}
+
+.vk-icon:after {
+  content: url(../img/vk-hover.png);
+  top: 5px;
+  right: -3px;
+}
+
+.vk .product-card__text {
+  text-align: center;
+}
+
+.product-card__text {
+  text-align: center;
+}
+
+.slider-box {
+  padding: 0 30px;
+  max-width: 1340px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 20;
+}
+.slider-box .swiper {
+  position: static;
+}
+.slider-box .swiper-wrapper {
+  position: static;
+}
+
+.header__search {
+  display: none;
+  background: #fff;
+  padding: 5px 0;
+  position: relative;
+  z-index: 301;
+}
+.header__search .container {
+  position: relative;
+}
+.header__search.active {
+  display: block;
+}
+.header__search input {
+  width: 100%;
+  padding: 10px 28px;
+  border-bottom: 1px solid grey;
+}
+
+.header-search__button {
+  width: 16px;
+  height: 16px;
+  background: url(../img/svg/search.svg);
+  position: absolute;
+  left: 11px;
+  top: 10px;
+}
+
+.menu__chevron {
+  width: 15px;
+  height: 8px;
+  background: url(../img/chevron.png) no-repeat center;
+  display: none;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.menu__item {
+  position: relative;
+}
+.menu__item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+  top: 100%;
+  left: -20px;
+  background: #fff;
+  padding: 30px 20px;
+}
+.submenu a {
+  display: block;
+}
+.submenu a:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  top: 48%;
+  background: #fff;
+}
+.swiper-button-next:before,
+.swiper-button-prev:before {
+  content: url(../img/arrow-hover.png);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+  position: absolute;
+  right: 19px;
+  top: 25px;
+  width: 19px;
+  height: 14px;
+}
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.swiper-button-prev:before {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  right: 22px;
+  top: 27px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-next:after {
+  content: url(../img/right-arrow.png);
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 1;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-button-prev:after {
+  content: url(../img/left-arrow.png);
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 1;
+}
+
+.swiper-button-disabled {
+  opacity: 1 !important;
+}
+
+.header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__top {
+  background: #bdebfe;
+  padding: 24px 0px 20px 0;
+  font-size: 16px;
+  font-family: "Vaccine Sans Bold";
+  z-index: 1000;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.header__top.white {
+  background: #fff;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.burger {
+  display: none;
+}
+
+.header__top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.header__top-nav a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.header__top-nav a:hover {
+  background: #fff;
+}
+
+.header__top-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.header__top-icon {
+  position: relative;
+  cursor: pointer;
+}
+.header__top-icon img {
+  vertical-align: top;
+}
+.header__top-icon.search:after, .header__top-icon.favorite:after, .header__top-icon.header__basket:after, .header__top-icon.user:after {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+.header__top-icon.search {
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+}
+.header__top-icon.search img {
+  width: 16px;
+  height: 16px;
+}
+.header__top-icon.search:after {
+  content: url(../img/search-hover.png);
+  right: -3px;
+  top: 0;
+}
+.header__top-icon.search:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.header__top-icon.favorite {
+  z-index: 1;
+  width: 16px;
+  height: 17px;
+}
+.header__top-icon.favorite img {
+  width: 16px;
+  height: 17px;
+}
+.header__top-icon.favorite:after {
+  content: url(../img/favorite-hover.png);
+  right: -4px;
+  top: 3px;
+}
+.header__top-icon.favorite:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.header__top-icon.user {
+  z-index: 1;
+  width: 15px;
+  height: 16px;
+}
+.header__top-icon.user img {
+  width: 15px;
+  height: 16px;
+}
+.header__top-icon.user:after {
+  content: url(../img/profile-hover.png);
+  right: -3px;
+  top: 2px;
+}
+.header__top-icon.user:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.header__top-icon.header__basket {
+  z-index: 1;
+  width: 15px;
+  height: 16px;
+}
+.header__top-icon.header__basket img {
+  width: 15px;
+  height: 16px;
+  display: inherit;
+}
+.header__top-icon.header__basket:after {
+  content: url(../img/basket-hover.png);
+  right: 16px;
+  top: 2px;
+}
+.header__top-icon.header__basket:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__basket-value {
+  font-family: "Vaccine Sans Light";
+  font-size: 18px;
+  margin: 0 0 0 3px;
+  position: relative;
+  bottom: 2px;
+}
+
+.header__bottom {
+  padding: 36px 0;
+  background: #fff;
+}
+
+.header__bottom-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__bottom-nav {
+  font-family: "Vaccine Sans Light";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 41px;
+  font-size: 18px;
+}
+.header__bottom-nav a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+.header__bottom-nav a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  max-width: 0;
+  -webkit-transition: max-width 0.3s linear;
+  transition: max-width 0.3s linear;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000;
+}
+.header__bottom-nav a:hover::after {
+  max-width: 100%;
+}
+
+.header__tel {
+  font-family: "Vaccine Sans ExtraBold";
+  font-size: 18px;
+}
+
+.main-screen {
+  margin: 18px 0 130px 0;
+}
+
+.main-screen__content {
+  position: absolute;
+  top: -108px;
+  left: -35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-screen__content .trend-text {
+  font-size: 315px;
+  font-family: "Vaccine Sans ExtraBold Italic";
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+}
+.main-screen__content .button {
+  border: 1px solid #fff;
+  color: #fff;
+  min-width: 150px;
+}
+
+.main-screen__item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.advantages {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 124px 0;
+}
+.advantages:after {
+  content: url(../img/advantages-after.png);
+  position: absolute;
+  right: 0;
+  top: -275px;
+  z-index: -1;
+}
+
+.advantages__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 72px;
+}
+
+.advantages__left-item {
+  font-size: 18px;
+}
+
+.advantages__left-img {
+  height: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 0 17px 0;
+}
+
+.advantages__left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 75px 2fr;
+  grid-template-columns: repeat(2, 2fr);
+  -webkit-column-gap: 75px;
+     -moz-column-gap: 75px;
+          column-gap: 75px;
+  row-gap: 85px;
+  max-width: 330px;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.advantages__heading {
+  margin: -10px 0 44px 0;
+}
+.advantages__heading h1 {
+  font-family: "Vaccine Sans Light";
+}
+
+.advantages__descr {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 45px 0;
+}
+
+.extra-bold {
+  font-family: "Vaccine Sans ExtraBold";
+}
+
+.button {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 21px;
+  text-align: center;
+  min-width: 200px;
+  display: inline-block;
+  position: relative;
+  font-family: "Vaccine Sans Regular";
+  font-size: 18px;
+}
+.button:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  background: #bdebfe;
+  border-radius: 21px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-card {
+  position: relative;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+.product-card:hover .product-card__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.product-card:hover .product__indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.product-card:hover .product__img {
+  background: #f4f4f4;
+}
+.product-card:hover .product-card__bottom {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-card__favorite,
+.product-card__basket {
+  cursor: pointer;
+}
+
+.product-card__icons {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  right: 22px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.hits {
+  margin: 0 0 142px 0;
+}
+
+.product__img {
+  height: 387px;
+  position: relative;
+  background: #fff;
+  padding: 62px 20px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 15px 0;
+}
+.product__img img {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+.product__img img.active {
+  display: block;
+}
+.product__img video {
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+.product__img video.active {
+  display: block;
+}
+
+.product__indicators {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.product__indicator {
+  height: 100%;
+  border-bottom: 5px solid #dedede;
+}
+.product__indicator.current {
+  border-bottom: 5px solid #acacac;
+}
+
+.photo-gallerey__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photo-gallerey__item {
+  height: 750px;
+}
+
+.photo-gallerey {
+  margin: 0 0 64px 0;
+}
+
+.new {
+  margin: 0 0 129px 0;
+}
+
+.more-box {
+  margin: 37px 0 0 0;
+  font-size: 18px;
+  text-align: right;
+}
+.more-box a {
+  padding: 0 0 5px 0;
+  display: inline-block;
+  position: relative;
+}
+.more-box a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #888888;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.projects {
+  position: relative;
+  margin: 0 0 81px 0;
+}
+.projects:before {
+  content: url(../img/proj-before.png);
+  position: absolute;
+  left: 0;
+  top: -300px;
+  z-index: -1;
+}
+
+.projects__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 31px;
+}
+
+.project__items-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 31px 2fr;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 31px;
+}
+
+.project__item {
+  position: relative;
+}
+.project__item:hover .project__info {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project__item--tall {
+  width: 405px;
+}
+
+.project__info {
+  padding: 21px 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  background: #bdebfe;
+  width: 100%;
+}
+.project__info .button {
+  min-width: 150px;
+}
+
+.project__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project__item--big {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+
+.footer {
+  background: #bdebfe;
+  padding: 57px 0 111px 0;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 53px;
+     -moz-column-gap: 53px;
+          column-gap: 53px;
+  row-gap: 20px;
+}
+
+.footer__address {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.footer__tel {
+  font-family: "Vaccine Sans ExtraBold";
+  font-size: 23px;
+}
+.footer__tel a {
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.footer__tel a:hover {
+  background: #fff;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin: 0 0 42px 0;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 75px;
+     -moz-column-gap: 75px;
+          column-gap: 75px;
+  row-gap: 15px;
+  font-size: 18px;
+  margin: 26px 0 0 0;
+}
+
+.footer__col:last-child {
+  margin: 24px 0 0 0;
+}
+
+.footer__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.footer__nav-item a {
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.footer__nav-item a:hover {
+  background: #fff;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 24px;
+  margin: 0 0 16px 0;
+}
+
+.footer__mail {
+  font-family: "Vaccine Sans ExtraBold";
+  font-size: 18px;
+  display: inline-block;
+  margin: 0 0 75px 0;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+.footer__mail:hover {
+  background: #fff;
+}
+
+.footer__designer {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.footer__designer span {
+  position: relative;
+  top: 9px;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 14px;
+  font-family: "Vaccine Sans Light Italic";
+  color: #a8a8a8;
+  margin: 46px 0 30px 0;
+}
+
+.breadcrumb__link {
+  position: relative;
+}
+.breadcrumb__link:after {
+  content: "/";
+  position: absolute;
+  right: -10px;
+  top: 4px;
+  font-size: 10px;
+}
+.breadcrumb__link:last-child::after {
+  content: none;
+}
+
+.button__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 14px;
+  font-size: 15px;
+  margin: 0 0 70px 0;
+}
+.button__navigation .button {
+  min-width: auto;
+  padding: 7px 22px;
+}
+
+.blog__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.333fr 32px 1.333fr 32px 1.333fr;
+  grid-template-columns: repeat(3, 1.333fr);
+  -webkit-column-gap: 32px;
+     -moz-column-gap: 32px;
+          column-gap: 32px;
+  row-gap: 81px;
+}
+
+.blog-heading {
+  margin: 0 0 24px 0;
+}
+
+.blog__item {
+  font-family: "Vaccine Sans Regular";
+  font-size: 24px;
+}
+
+.blog__img {
+  margin: 0 0 20px 0;
+}
+.blog__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blog__wrapper {
+  padding: 0 0 135px 0;
+}
+
+.pagination {
+  max-width: 300px;
+  font-family: "Vaccine Sans Regular";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 129px auto 0px auto;
+}
+
+.pagination__link {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pagination__link.current {
+  background: #f4f4f4;
+}
+.pagination__link.prev {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.news-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 49px;
+  margin: 0 0 24px 0;
+}
+
+.news-main__img {
+  max-width: 764px;
+}
+.news-main__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news-main__content {
+  max-width: 468px;
+  margin: 148px 0 0 0;
+}
+
+.photo-author {
+  font-family: "Vaccine Sans Light Italic";
+  margin: 20px 0 0 0;
+  line-height: 22px;
+}
+
+.news-main__date {
+  font-family: "Vaccine Sans Light Italic";
+  margin: 0 0 66px 0;
+  display: block;
+  color: #000;
+}
+
+.news-main__content h1 {
+  font-family: "Vaccine Sans ExtraBold";
+  font-size: 35px;
+  line-height: 40px;
+  margin: 0 0 32px 0;
+}
+
+.news-main__descr {
+  font-family: "Vaccine Sans Light Italic";
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.news__item--offset {
+  padding: 0 0 0 217px;
+  margin: 0 0 50px 0;
+}
+
+.news__item-head {
+  margin: 0 0 15px 0;
+}
+
+.news__item-body {
+  font-size: 18px;
+  line-height: 25px;
+  max-width: 900px;
+}
+
+.news__item-descr:not(:last-child) {
+  margin: 0 0 30px 0;
+}
+
+.news__img {
+  margin: 0 0 50px 0;
+}
+.news__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.numeric-list {
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  counter-reset: section;
+}
+
+.numeric-list__item {
+  font-size: 18px;
+  position: relative;
+  padding: 0 0 0 43px;
+}
+.numeric-list__item:before {
+  counter-increment: section;
+  content: "0" counters(section, ".") ".";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-family: "Vaccine Sans Bold";
+}
+.numeric-list__item:nth-child(n+10):before {
+  content: counters(section, ".") ".";
+}
+
+.numeric-list__item:not(:last-child) {
+  margin: 0 0 15px 0;
+}
+
+.blog__wrapper {
+  padding: 0 0 144px 0;
+}
+
+.news-descr__bottom {
+  font-family: "Vaccine Sans Light Italic";
+  font-size: 24px;
+  line-height: 36px;
+}
+.news-descr__bottom span {
+  background: #bdebfe;
+}
+
+.big-card__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.75fr 50px 1.25fr;
+  grid-template-columns: 2.75fr 1.25fr;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 25px;
+  margin: 0 0 115px 0;
+}
+
+.big-card__slider {
+  width: 100%;
+  height: 870px;
+}
+.big-card__slider .swiper-button-next {
+  right: 431px;
+}
+.big-card__slider .swiper-button-next,
+.big-card__slider .swiper-button-prev {
+  top: 400px;
+}
+
+.big-card__img {
+  padding: 100px 20px;
+  background: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.big-card__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.youtube {
+  padding: 0;
+  background: transparent;
+  z-index: 0;
+  position: relative;
+  background-size: 100% 100%;
+}
+
+.big-card__slider iframe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.big-card__slider video {
+  width: 100%;
+  height: 100%;
+}
+
+.play-icon {
+  width: 45px;
+  height: 45px;
+  background: url(../img/svg/play.svg) no-repeat center;
+  background-size: 45px 45px;
+  position: relative;
+  top: 1px;
+}
+
+.big-card__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.big-card__favorite {
+  cursor: pointer;
+}
+
+.big-card__articule {
+  margin: 0 0 35px 0;
+  font-family: "Vaccine Sans Light Italic";
+}
+
+.big-card__descr {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 67px 0;
+}
+
+.video-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.accordion-head {
+  font-family: "Vaccine Sans Bold";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.accordion-head.active .accordion-chevron {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.accordion-chevron {
+  width: 21px;
+  height: 13px;
+  background: url(../img/chevron.png) no-repeat center;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  display: inline-block;
+}
+
+.download-icon {
+  width: 21px;
+  height: 21px;
+  background: url(../img/download.png) no-repeat center;
+}
+
+.accordion__item {
+  border: 1px solid #777777;
+  border-width: 1px 0 1px 0;
+  display: block;
+}
+.accordion__item:not(:first-child) {
+  border-width: 0 0 1px 0;
+}
+
+.accordion__content {
+  display: none;
+  padding: 0 0 20px 0;
+}
+
+.radio-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.radio-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 20px 0 0;
+}
+
+.big-card__wrapper {
+  padding: 0 0 135px 0;
+}
+
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background: #fff;
+  border: 1px solid #000000;
+  border-radius: undefinedpx;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #fff;
+}
+
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control_indicator:after {
+  -webkit-box-sizing: unset;
+          box-sizing: unset;
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+
+.control-radio .control_indicator {
+  border-radius: 50%;
+}
+
+.control-radio .control_indicator:after {
+  left: 3px;
+  top: 3px;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #000;
+  -webkit-transition: background 250ms;
+  transition: background 250ms;
+}
+
+.control-radio input:disabled ~ .control_indicator:after {
+  background: #7b7b7b;
+}
+
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.checkbox-filter {
+  position: relative;
+}
+
+.checkbox-filter__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 8px;
+  -moz-column-gap: 8px;
+  column-gap: 8px;
+  max-width: 130px;
+  width: 100%;
+  min-width: 130px;
+  cursor: pointer;
+}
+.checkbox-filter__head.active .accordion-chevron {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.checkbox-filter__menu {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  z-index: 2;
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+.checkbox-filter__menu .control {
+  margin-bottom: 10px;
+}
+.checkbox-filter__menu.active {
+  display: block;
+}
+
+.control-checkbox:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #fff;
+}
+
+.char__item {
+  padding: 10px 30px 10px 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+}
+.char__item:nth-child(2n+2) {
+  background: #f4f4f4;
+}
+
+.char__name {
+  max-width: 182px;
+}
+
+.char__value {
+  min-width: 70px;
+  text-align: left;
+}
+
+.accordion__descr:not(:last-child) {
+  margin: 0 0 14px 0;
+}
+
+.accordion__textblock {
+  padding: 0 21px 0 21px;
+}
+
+.modifier__item {
+  padding: 10px 30px 10px 21px;
+  margin: 0 0 10px 0;
+}
+.modifier__item:not(:first-child) {
+  background: #f4f4f4;
+  text-decoration: underline;
+}
+.modifier__item:last-child {
+  margin: 0;
+}
+
+.catalog__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 30px;
+  margin: 0 0 42px 0;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.catalog__navigation .button__navigation {
+  margin: 0;
+}
+
+.reset-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 0 42px 0;
+}
+.reset-box .button {
+  background: none;
+}
+
+.catalog__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.custom-select {
+  position: relative;
+  font-family: "Vaccine Sans Regular";
+  min-width: 130px;
+}
+
+.custom-select__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+  max-width: 130px;
+  width: 100%;
+}
+
+.select-menu {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  z-index: 2;
+  width: 100%;
+  margin: 6px 0 0 0;
+}
+
+.custom-select {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.custom-select.active .accordion-chevron {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.custom-select__value {
+  display: inline-block;
+}
+
+.custom-select.active .select-menu {
+  display: block;
+}
+
+.select-menu__item {
+  padding: 7px 0px;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+.select-menu__item.hidden {
+  display: none;
+}
+
+.catalog__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr 25px 1fr 25px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  row-gap: 90px;
+}
+
+.product-card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
+  transition: opacity 0.3s linear, visibility 0.3s linear;
+}
+
+.catalog__wrapper {
+  padding: 0 0 135px 0;
+}
+
+.card__bottom-col {
+  max-width: 65px;
+}
+
+.card__bottom-name {
+  margin: 0 0 10px 0;
+  color: #a8a8a8;
+  font-size: 14px;
+}
+
+.card__bottom-value {
+  font-family: "Vaccine Sans Regular";
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: none;
+}
+
+.video-button {
+  background: none;
+}
+
+.modal-video {
+  max-width: 1301px;
+  width: 100%;
+  height: 75vh;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 1002;
+}
+.modal-video video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: initial;
+     object-fit: initial;
+}
+.modal-video iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.close-video {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: url(../img/svg/close.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+
+@media screen and (max-width: 1330px) {
+  .big-card__inner {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+  }
+
+  .big-card__slider {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .video-link {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .big-card__content {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .big-card__slider .swiper-button-next {
+    right: 0;
+  }
+
+  .big-card__slider {
+    height: 600px;
+  }
+
+  .big-card__slider .swiper-button-next,
+.big-card__slider .swiper-button-prev {
+    top: 291px;
+  }
+
+  .main-screen__content .trend-text {
+    font-size: 223px;
+  }
+
+  .main-screen__content {
+    top: -69px;
+  }
+
+  .header__bottom-nav {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header__top-nav {
+    gap: 15px;
+  }
+
+  .header__bottom-nav {
+    gap: 20px;
+  }
+
+  .footer__nav {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+
+  .advantages__left {
+    -webkit-column-gap: 35px;
+       -moz-column-gap: 35px;
+            column-gap: 35px;
+    row-gap: 35px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  body.fixed {
+    overflow: hidden;
+  }
+
+  .container {
+    padding: 0 22px;
+  }
+
+  .header__inner .top-nav__box,
+.bottom-nav__box .header__bottom-nav {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+  }
+
+  .header-search__button {
+    left: 22px;
+  }
+
+  .swiper-button-next:after {
+    top: -10px;
+    left: 10px;
+  }
+
+  .swiper-button-prev:after {
+    top: -10px;
+    left: 10px;
+  }
+
+  .swiper-button-next:before {
+    right: 9px;
+    top: 15px;
+  }
+
+  .swiper-button-prev:before {
+    right: 13px;
+    top: 17px;
+  }
+
+  h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .footer__mail {
+    margin: 0 0 16px 0;
+  }
+
+  .header__top-icons {
+    gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header__top-icon.search {
+    margin: -9px 0 0 0;
+  }
+
+  .header__top-icon.header__basket {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+  }
+
+  .header__basket-value {
+    position: static;
+  }
+
+  .header__top-icon.search img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__designer {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .menu__item-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: 340px;
+  }
+  .menu__item-head.active .menu__chevron {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+
+  .header__logo img,
+.footer__logo img {
+    width: 170px;
+    height: 63px;
+  }
+
+  .submenu {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    padding: 15px 0 0 0;
+  }
+
+  .menu__item {
+    width: 100%;
+  }
+
+  .menu__chevron {
+    display: inline-block;
+  }
+
+  .footer__social {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 16px 0;
+  }
+
+  .footer__col:last-child {
+    margin: 0;
+  }
+
+  .footer__nav {
+    margin: 0;
+  }
+
+  .footer__nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .header__top-nav,
+.header__bottom-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+
+  .header__top-nav {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    font-family: "Vaccine Sans ExtraBold";
+  }
+
+  .header__bottom-nav {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 0 0 30px 0;
+  }
+
+  .mobile-nav__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .header__tel {
+    display: inline-block;
+    margin: 15px 0 0 0;
+  }
+
+  .header__bottom {
+    display: none;
+  }
+
+  .header__top {
+    padding: 11px 0px 5px 0;
+  }
+
+  .header__logo {
+    bottom: 8px;
+    left: 0px;
+  }
+
+  .mobile-nav {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 79px;
+    overflow: auto;
+    background: #fff;
+    z-index: 300;
+    padding: 51px 20px 200px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    margin: -5px 0px 0 0;
+  }
+  .burger span {
+    display: block;
+    width: 34px;
+    height: 2px;
+    background: #000;
+  }
+  .burger span:not(:last-child) {
+    margin: 0 0 7px 0;
+  }
+  .burger.active span:first-child {
+    display: none;
+  }
+  .burger.active span:last-child {
+    display: none;
+  }
+  .burger.active span:not(:last-child) {
+    margin: 0;
+  }
+
+  .header-favorite__box,
+.header-user__box,
+.header-basket__box {
+    display: none;
+  }
+
+  .mobile-nav__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 301;
+    bottom: 0;
+    right: -20px;
+    width: calc(100% + 40px);
+    background: #fff;
+    border-top: 1px solid #000;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .advantages__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 69px;
+    row-gap: 69px;
+  }
+
+  .advantages__left-img.car img {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .advantages__descr {
+    margin: 0 0 30px 0;
+  }
+
+  .advantages__heading {
+    margin: 0px 0 24px 0;
+  }
+
+  .main-screen__content .trend-text {
+    font-size: 141px;
+    font-family: "Vaccine Sans ExtraBold";
+  }
+
+  .main-screen__content {
+    top: -44px;
+    left: -12px;
+  }
+
+  .advantages__left-text {
+    text-align: center;
+  }
+
+  .advantages__left {
+    max-width: 100%;
+    justify-items: center;
+    height: auto;
+  }
+
+  .advantages__left-img {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 3px 0;
+  }
+
+  .photo-gallerey__item {
+    height: 495px;
+  }
+
+  .projects__inner {
+    gap: 15px;
+  }
+
+  .project__items-box {
+    gap: 15px;
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slider-box {
+    padding: 0 20px;
+  }
+
+  .main-screen {
+    margin: 25px 0 53px 0;
+  }
+
+  .projects:before {
+    content: none;
+  }
+
+  .blog__item {
+    font-size: 22px;
+  }
+
+  .news-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .news-main__img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .news__item--offset {
+    padding: 0;
+  }
+
+  .news-main__content {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .news-main__date {
+    margin: 0 0 25px 0;
+  }
+
+  .news-main__content h1 {
+    margin: 0 0 25px 0;
+  }
+
+  .news-main__content h1 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .news-main__descr {
+    line-height: 22px;
+  }
+
+  .catalog__box {
+    -ms-grid-columns: (1.333fr)[3];
+    grid-template-columns: repeat(3, 1.333fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .project__items-box {
+    display: none;
+  }
+
+  .main-screen__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+
+  .main-screen__content .button {
+    font-size: 14px;
+    padding: 5px;
+    min-width: 99px;
+  }
+
+  .main-screen__content .trend-text {
+    font-size: 116px;
+    line-height: 120px;
+  }
+
+  .more-box {
+    text-align: left;
+  }
+
+  .project__item--tall {
+    width: 100%;
+    max-height: 497px;
+  }
+
+  .advantages:after {
+    content: url(../img/advantages-mobile.png);
+    top: 340px;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .advantages__left-img img {
+    max-width: 57px;
+    max-height: 62px;
+  }
+
+  .advantages__left-img {
+    height: 66px;
+  }
+
+  .advantages {
+    margin: 0 0 73px 0;
+  }
+
+  .heading {
+    margin: 0 0 12px 0;
+  }
+
+  .gallerey-heading {
+    margin: 0 0 20px 0;
+  }
+
+  .more-box {
+    margin: 20px 0 0 0;
+  }
+
+  .product__img {
+    height: 383px;
+  }
+
+  .hits {
+    margin: 0 0 75px 0;
+  }
+
+  .photo-gallerey {
+    margin: 0 0 76px 0;
+  }
+
+  .new {
+    margin: 0 0 73px 0;
+  }
+
+  .projects-heading {
+    margin: 0 0 23px 0;
+  }
+
+  .blog__inner {
+    -ms-grid-columns: 2fr 15px 2fr;
+    grid-template-columns: repeat(2, 2fr);
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+    row-gap: 45px;
+  }
+
+  .blog-heading {
+    margin: 0 0 14px 0;
+  }
+
+  .button__navigation {
+    -webkit-column-gap: 11px;
+       -moz-column-gap: 11px;
+            column-gap: 11px;
+    row-gap: 11px;
+    margin: 0 0 45px 0;
+  }
+
+  .big-card__slider {
+    height: 388px;
+  }
+
+  .big-card__img {
+    padding: 45px 20px;
+  }
+
+  .big-card__slider .swiper-button-next,
+.big-card__slider .swiper-button-prev {
+    top: 200px;
+  }
+
+  .footer {
+    padding: 40px 0;
+  }
+
+  .catalog__box {
+    -ms-grid-columns: (2fr)[2];
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .breadcrumbs {
+    margin: 24px 0px 11px 0;
+  }
+
+  .button__navigation .button {
+    padding: 8px 33px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .advantages__heading h1 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  h1 {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .main-screen__content .trend-text {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .footer__nav-item:last-child {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 188px 150px;
+    grid-template-columns: 188px 150px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 25px 0;
+    border: 1px solid #000;
+    border-width: 1px 0 1px 0;
+    margin: 15px 0 0 0;
+  }
+
+  .advantages__descr {
+    font-size: 18px;
+    line-height: 22px;
+    color: #a8a8a8;
+  }
+
+  .projects__wrapper {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+    gap: 15px;
+  }
+
+  .wrapper {
+    padding: 0 0 50px 0;
+  }
+
+  .pagination {
+    margin: 50px auto 0 auto;
+  }
+}
+@media screen and (max-width: 470px) {
+  .blog__inner {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+  }
+
+  .blog__img img {
+    width: 100%;
+  }
+
+  .catalog__box {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+  }
+}
+@media screen and (max-width: 389px) {
+  .photo-gallerey__item {
+    height: 380px;
+  }
+
+  .footer__nav-item:last-child {
+    -ms-grid-columns: (2fr)[2];
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}

@@ -1,0 +1,90 @@
+.projects__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 32px 2fr;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 32px;
+}
+.projects__wrapper .project__item {
+  max-height: 480px;
+}
+
+.wrapper {
+  padding: 0 0 120px 0;
+}
+
+.project-inner__head {
+  margin: 0 0 45px 0;
+}
+.project-inner__head img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project-inner__text {
+  padding: 0 0 0 217px;
+  font-family: "Vaccine Sans Light";
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.project-date {
+  font-family: "Vaccine Sans Light Italic";
+  margin: 0 0 18px 0;
+}
+
+.project-inner__images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 28px 2fr;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 28px;
+}
+
+.project-inner__content {
+  margin: 0 0 60px 0;
+}
+
+.project-inner__img {
+  max-height: 480px;
+}
+.project-inner__img.big {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  max-height: none;
+}
+.project-inner__img img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1025px) {
+  .project-inner__text {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  .project-inner__images {
+    -ms-grid-columns: 4fr;
+    grid-template-columns: 4fr;
+  }
+
+  .project-inner__img.big {
+    grid-column: auto;
+  }
+
+  .project-inner__img {
+    height: 265px;
+    max-height: none;
+  }
+  .project-inner__img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-inner__content {
+    margin: 0 0 30px 0;
+  }
+}
